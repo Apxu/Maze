@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="maze.js"></script>
+    <title>Maze</title>
+
+</head>
+<body>
+<div>
+    <p id="message"></p>
+</div>
+<div>
+    <label for="name">Name:</label>
+    <input type="text" value="sbunin" id="name">
+</div>
+<div>
+    <label for="contact">Contact:</label>
+    <input type="text" value="sbunin@evolutiongaming.com" id="contact">
+</div>
+<div>
+    <label for="pass">Password:</label>
+    <input type="text" value="darkest night" id="pass">
+</div>
+<div>
+    <button type="button" onclick="move = sendData();">Submit</button>
+</div>
+
+<div style="text-align:center; width:480px;">
+    <button onclick="move.up()">UP</button><br>
+    <button onclick="move.left()">LEFT</button>
+    <button onclick="move.right()">RIGHT</button><br>
+    <button onclick="move.down()">DOWN</button><br>
+    <input type="button" onclick="move.darkestNight()" value="Darkest night" /><br>
+    <input type="button" onclick="move.switchAuto()" value="Switch auto" /><br>
+    <input type="text" id="action" />
+    <input type="button" onclick="move.action(document.getElementById('action').value)" value="Do action" />
+</div>
+
+</body>
+</html>
